@@ -25,7 +25,7 @@ const dataPath = {
 
 if (dataPath.imagePath != undefined) {
   if (dataPath.songPath != undefined) {
-    if (dataPath.scale != `square` && dataPath.scaling != 'landscape') {
+    if (dataPath.scale != `square` && dataPath.scale != 'landscape') {
       console.log(`${consoleColor.redBan}Error: ${consoleColor.logReset}Scaling must be 'square' or 'landscape'`);  
     } else {
       canvasGen(dataPath)
