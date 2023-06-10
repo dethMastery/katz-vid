@@ -22,11 +22,13 @@ const dataPath = {
   scaling: scaling
 }
 
-console.log(dataPath);
-
 if (dataPath.imagePath != undefined) {
   if (dataPath.songPath != undefined) {
-    
+    if (dataPath.scaling != `square` && dataPath.scaling != 'landscape') {
+      console.log(`${consoleColor.redBan}Error: ${consoleColor.logReset}Scaling must be 'square' or 'landscape'`);  
+    } else {
+
+    }
   } else {
     console.log(`${consoleColor.redBan}Error: ${consoleColor.logReset}Path of song input not found`);
   }
