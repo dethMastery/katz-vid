@@ -3,6 +3,7 @@
 const yargs = require('yargs')
 
 const consoleColor = require('./consoleColor')
+const canvasGen = require('./index')
 
 const opt = yargs
   .usage("\x1b[32mUsage: 'katzVid <imagePath> <songPath>'\x1b[0m")
@@ -19,15 +20,15 @@ const scaling = (opt.s == undefined) ? 'square' : opt.s
 const dataPath = {
   imagePath: opt._[0],
   songPath: opt._[1],
-  scaling: scaling
+  scale: scaling
 }
 
 if (dataPath.imagePath != undefined) {
   if (dataPath.songPath != undefined) {
-    if (dataPath.scaling != `square` && dataPath.scaling != 'landscape') {
+    if (dataPath.scale != `square` && dataPath.scaling != 'landscape') {
       console.log(`${consoleColor.redBan}Error: ${consoleColor.logReset}Scaling must be 'square' or 'landscape'`);  
     } else {
-
+      canvasGen(dataPath)
     }
   } else {
     console.log(`${consoleColor.redBan}Error: ${consoleColor.logReset}Path of song input not found`);
