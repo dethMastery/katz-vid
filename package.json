@@ -1,0 +1,27 @@
+{
+  "name": "canvas-video-generator",
+  "version": "1.0.0",
+  "description": "exif watermark generator :x",
+  "main": "./bin/index.js",
+  "keywords": [
+    "nodejs",
+    "cli-tools",
+    "video tools"
+  ],
+  "repository": "https://github.com/dethMastery/canvas-video-generator.git",
+  "author": "dethMastery <me@suphakit.net>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node ./bin/cli.js"
+  },
+  "bin": {
+    "katzVid": "./bin/cli.js"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "fs": "^0.0.1-security",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "yargs": "^17.7.2"
+  }
+}
