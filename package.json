@@ -1,6 +1,6 @@
 {
   "name": "katz-vid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "exif watermark generator :x",
   "main": "./bin/index.js",
   "keywords": [
